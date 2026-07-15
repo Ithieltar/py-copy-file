@@ -10,5 +10,5 @@ def copy_file(command: str) -> None:
     try:
         with open(src, "rb") as source, open(dst, "wb") as destination:
             destination.write(source.read())
-    except FileNotFoundError as e:
+    except FileNotFoundError:
         return
